@@ -24,10 +24,10 @@ public class ScheduledTasks {
      * Ping Heroku apps every 20 minutes to stop them from sleeping every 30 minutes.
      * @throws IOException
      */
-   // @Scheduled(fixedRate = 1200000)
+    @Scheduled(fixedRate = 1200000)
     public void pingHerokuApps() throws IOException {
         logger.info("Fixed Rate Task :: Execution Time - {}", dateTimeFormatter.format(LocalDateTime.now()));
-      //  ping("https://pd-social-server.herokuapp.com");
+        ping("https://beinghealer-server.herokuapp.com");
       //  ping("https://lit-beach-29911.herokuapp.com");
     }
 
