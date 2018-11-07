@@ -24,7 +24,7 @@ public class Email {
 
     /*anita1sachdeva@gmail.com,*/
     @Transient
-    private List<String> to = Arrays.asList(splitByComma("ruchirsachdeva@gmail.com,help@beinghealer.com"));
+    private List<String> to = Arrays.asList(splitByComma("ruchirsachdeva@gmail.com,help@beinghealer.com,anita1sachdeva@gmail.com"));
 
     private String name;
 

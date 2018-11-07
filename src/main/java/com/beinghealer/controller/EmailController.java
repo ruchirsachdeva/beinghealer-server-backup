@@ -21,7 +21,7 @@ public class EmailController {
     EmailService service;
 
     @RequestMapping(method = RequestMethod.POST)
-    @CrossOrigin(origins = {"http://localhost:4200", "https://lit-beach-29911.herokuapp.com"})
+    @CrossOrigin(origins = {"http://localhost:4200", "http://www.beinghealer.com", "*"})
     public ResponseEntity create(@Valid @RequestBody EmailParams params, WebRequest request) {
 
         service.send(params.toEmail());
