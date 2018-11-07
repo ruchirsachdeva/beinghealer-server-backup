@@ -58,7 +58,7 @@ public class LoginController {
             return new AuthResponse(token);
         }).orElseThrow(RuntimeException::new); // it does not happen.
     }
-    
+
 
     @Value
     private static final class AuthParams {
