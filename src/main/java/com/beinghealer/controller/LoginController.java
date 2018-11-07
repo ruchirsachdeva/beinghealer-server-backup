@@ -58,23 +58,7 @@ public class LoginController {
             return new AuthResponse(token);
         }).orElseThrow(RuntimeException::new); // it does not happen.
     }
-
-
-    @RequestMapping(value = {"/", "/login"})
-    public AuthResponse auth() {
-        return securityContextService.currentUser().map(u -> {
-            final String token = tokenHandler.createTokenForUser(u);
-            return new AuthResponse(token);
-        }).orElseThrow(RuntimeException::new); // it does not happen.
-    }
-
-
-    @CrossOrigin(origins = {"http://localhost:4200", "https://lit-beach-29911.herokuapp.com"})
-    @RequestMapping(value = {"/", "/login"}, method = RequestMethod.OPTIONS)
-    public ResponseEntity authOption() {
-        return ResponseEntity.ok().build();
-    }
-
+    
 
     @Value
     private static final class AuthParams {
